@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>web2-javascript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title" id="main_title">JavaScript</h1>
+    <p class="desc_info" id="main_info">자바스크립트는 <u>객체기반의 스크립트 언어</u>이다.<br>HTML로는 웹의 내용을 작성하고, CSS로는 웹을 디자인했다면, 자바스크립트로는
+        <u>웹의 동작을 구현</u>할 수 있다.<br>
+    </p>
+
+    <ol class="list_main_vertical">
+        <li>
+            <a id="site_link" href="index.html">1. JavaScript</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_1.html">2. 자바스크립트 예시</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_2.html">3. Script 태그</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_3.html">4. EVENT</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_4.html">5. CONSOLE</a>
+        </li>
+    </ol>
+
+
+    <div class="wrap_content">
+        <div class="index">
+            <h2 class="title" id="subtitle1_1">EVENT</h2>
+            <ul class="list_sub_vertical">
+                <li class>
+                    <a id="link1" href="#tab1-1" class="link_tab" onclick="tabClick(this)">EVENT</a>
+                </li>
+                <li class>
+                    <a id="link2" href="#tab1-2" class="link_tab" onclick="tabClick(this)">추가예제</a>
+                </li>
+                <li class>
+                    <a id="link3" href="#tab1-3" class="link_tab" onclick="tabClick(this)"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_body">
+
+            <div class="content" id="tab1-1">
+                <h3 class="subtitle2" id="subtitle2_1">EVENT</h3>
+
+                <p class="desc_info">
+                    EVENT란 Javascript와 사용자가 상호작용할 때 매우 핵심적인 역할을 하는 요소이다. onclick,onkeydown 등 사용자와 상호작용할 때 발생하는 사건을 정의해놓은 속성이다.
+
+                </p>
+
+                <p class="desc_info">
+
+                <div class="code_source">
+                    <strong style="font-size:30px;;">JS 코드</strong>
+                </div>
+
+                <xmp>
+
+                    <body>
+
+                            <input type="button" value="hi" onclick="alert('hi')">
+
+                    </body>
+                </xmp>
+
+                <div class="code_result">
+                    <strong style="font-size:30px;">JS 결과</strong><br><br><br>
+
+
+                        <input type="button" value="hi" onclick="alert('hi')">
+
+                </div>
+
+
+                </p>
+            </div>
+
+
+            <div class="content">
+                <p class="desc_info">
+                    onclick이라는 속성의 속성값으로는 반드시 javascript가 와야 한다, javascript가 웹에서 동작하는 원리는 아래와 같다.<br><br> onclick 속성의 속성값을 웹브라우저가 기억하고 있다가, onclick 속성이 위치하고 있는 태그(해당 예제선 hi)에 사용자가 클릭했을 때 기억하고 있었던 javascript 코드를 해당하는 문법에 따라서 해석해서 그곳에 적힌대로 웹브라우저가 동작하는 원리이다.<br><br>
+
+                    이렇게 <strong>"웹브라우저 위에서 발생하는 일" 을 바로 EVENT(사건)</strong>이라고 한다.<br><br>
+                    
+                    웹브라우저에서 발생하는 사건을 입력값으로 보며, 이 사건의 입력을 받는 타입을 type속성의 인자로 설정하는 것인데, onclick은 클릭에 의한 입력이고, 그 외에 onchange(변경)등 대략 20개정도의 EVENT를 정의해 놓고 있기 때문에 이를 적절히 활용하여 유저와 웹의 상호작용을 도모할 수 있다.
+
+                </p>
+
+            </div>
+
+            <div class="content" id="tab1-2">
+                <h3 class="subtitle2" id="subtitle2_1">EVENT 추가예제</h3>
+
+                <p class="desc_info">
+
+                    <div class="code_source">
+                        <strong style="font-size:30px;;">JS 코드</strong>
+                    </div>
+    
+                    <xmp>
+    
+                        <body>
+    
+                            <input type="text" onchange="alert('changed')">
+                            <input type="text" onkeydown="alert('key down!')">
+    
+                        </body>
+                    </xmp>
+    
+                    <div class="code_result">
+                        <strong style="font-size:30px;">JS 결과</strong><br><br><br>
+
+                        <input type="text" onchange="alert('changed')">
+                        <input type="text" onkeydown="alert('key down!')">
+                            
+    
+                    </div>
+    
+    
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

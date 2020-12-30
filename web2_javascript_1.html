@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>web2-javascript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title" id="main_title">JavaScript</h1>
+    <p class="desc_info" id="main_info">자바스크립트는 <u>객체기반의 스크립트 언어</u>이다.<br>HTML로는 웹의 내용을 작성하고, CSS로는 웹을 디자인했다면, 자바스크립트로는
+        <u>웹의 동작을 구현</u>할 수 있다.<br>
+    </p>
+    <ol class="list_main_vertical">
+        <li>
+            <a id="site_link" href="index.html">1. JavaScript</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_1.html">2. 자바스크립트 예시</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_2.html">3. Script 태그</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_3.html">4. EVENT</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_4.html">5. CONSOLE</a>
+        </li>
+    </ol>
+
+    <div class="wrap_content">
+        <div class="index">
+            <h2 class="title" id="subtitle1_1">JavaScript</h2>
+            <ul class="list_sub_vertical">
+                <li class>
+                    <a id="link1" href="#tab1-1" class="link_tab" onclick="tabClick(this)">자바스크립트 예시</a>
+                </li>
+                <li class>
+                    <a id="link2" href="#tab1-2" class="link_tab" onclick="tabClick(this)"></a>
+                </li>
+                <li class>
+                    <a id="link3" href="#tab1-3" class="link_tab" onclick="tabClick(this)"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content_body">
+
+            <div class="content" id="tab1-1">
+                <h3 class="subtitle2" id="subtitle2_1">자바스크립트 예시</h3>
+
+                <p class="desc_info">
+                  <div class="code_result">
+                    <strong style="font-size:30px;">결과</strong><br><br><br>
+
+                    <input type="button" value="night" onclick="
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.color='white';
+                    ">
+                    <input type="button" value="day" onclick="
+                    document.querySelector('body').style.backgroundColor='White';
+                    document.querySelector('body').style.color='black';
+                    ">
+                  </div>
+
+                  <div class="code_source">
+                    <strong style="font-size:30px;">코드</strong>
+                  </div>
+
+                <xmp>
+                    <input type="button" value="night" onclick="
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.color='white';
+                    ">
+                    <input type="button" value="day" onclick="
+                    document.querySelector('body').style.backgroundColor='White';
+                    document.querySelector('body').style.color='black';
+                    ">
+                  </div>
+
+                </xmp>
+
+                <div class="content_list">
+
+                    <li>(1) <strong>input</strong> : 
+                    javascript를 사용하기 위한 태그는 input이다.</li>
+                    <li>(2) <strong>type="button"</strong> : 
+                        자바스크립트 실행을 위해 사용자와 상호작용할 요소를 "button"형 type으로 지정한다.</li>
+                    <li>(3) <strong>onclick="...."</strong> : 
+                        사용자가 button을 클릭하여 input을 줬을 때 상호작용으로 동작할 자바스크립트의 소스코드가 onclick의 인자로 들어간다.</li>
+                    <li>(4) <strong>"document.querySelector('body')</strong> : 문서상 'body' 태그를 선택하여 이하의 javascript 명령을 동작시킨다.</li>
+                    <li>(5) <strong>.style.backgroundColor='Black';"</strong> : 앞서 선택한 body의 스타일 배경색을 검정색으로 설정한다.</li>
+
+                </div>
+
+                </p>
+
+            </div>
+        
+        </div>
+
+
+    </div>
+</body>
+
+</html>
