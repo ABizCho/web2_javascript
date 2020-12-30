@@ -59,13 +59,13 @@
             color: black;
             font-size: 15px;
         }
-        .list_main_vertical {
+        #list_main_vertical {
             margin-top:150px;
             margin-bottom:120px;
             padding-left:510px;
             text-align:left;
         }
-        .list_main_vertical li { 
+        #list_main_vertical li { 
             font-size:15px;
             line-height:20px;
             color:grey;

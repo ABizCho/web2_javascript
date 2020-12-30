@@ -1,115 +1,117 @@
-    <style>
-        p {
-            margin-top: 80px;
-        }
+<!DOCTYPE html>
+<html>
 
-        h1 {
-            color: gold;
-            font-size: 75px;
-            text-align: center;
-            margin-top: 10px;
-        }
+<head>
+    <title>web2-javascript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        h2 {
-            color: gray;
-            font-size: 50px;
-        }
+<body>
+    <h1 class="title" id="main_title">JavaScript</h1>
+    <p class="desc_info" id="main_info">자바스크립트는 <u>객체기반의 스크립트 언어</u>이다.<br>HTML로는 웹의 내용을 작성하고, CSS로는 웹을 디자인했다면, 자바스크립트로는
+        <u>웹의 동작을 제어</u>할 수 있다.<br>
+    </p>
 
-        li {
-            list-style-type: none;
-            font-size:21px;
-            line-height: 50px;
-            padding-inline-start : 10px;
-        }
+    <ol class="list_main_vertical">
+        <li>
+            <a id="site_link" href="index.html">1. JavaScript</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_1.html">2. 자바스크립트 예시</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_2.html">3. Script 태그</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_3.html">4. EVENT</a>
+        </li>
+        <li>
+            <a id="site_link" href="web2_javascript_4.html">5. CONSOLE</a>
+        </li>
+    </ol>
 
-        .subtitle2 {
-            font-size: 45px;
-            color: black;
-        }
+    
 
-        .list_sub_vertical .link_tab {
-            color: gray;
+    <div class="wrap_content">
+        <div class="index">
+            <h2 class="title" id="subtitle1_1">JavaScript</h2>
+            <ul class="list_sub_vertical">
+                <li class>
+                    <a id="link1" href="#tab1-1" class="link_tab" onclick="tabClick(this)">빠르고 범용성 좋은</a>
+                </li>
+                <li class>
+                    <a id="link2" href="#tab1-2" class="link_tab" onclick="tabClick(this)">생동감 있는</a>
+                </li>
+                <li class>
+                    <a id="link3" href="#tab1-3" class="link_tab" onclick="tabClick(this)">재주 많은</a>
+                </li>
+            </ul>
+        </div>
 
-        }
+        <div class="content_body">
 
-        #main_info {
-            color: gray;
-            text-align: center;
-        }
+            <div class="content" id="tab1-1">
+                <h3 class="subtitle2" id="subtitle2_1">빠르고 범용성 좋은</h3>
+                <p class="desc_info">
+                    자바스크립트 외에도 JSP,Servlet,ASP등 동적 웹페이지 구축을 위한 많은 언어가 있다. 그중에서 자바 스크립트가 가장 많이 쓰이는 이유는 앞서 언급한 언어들은 웹
+                    서버(Server측)에서
+                    해석되고 실행되어 결과만 HTML로 변환되어 웹브라우저에서 보여주어 즉각적인 반응속도를 보여주지 못하는 반면 자바스크립트는 웹브라우저(Client측)에서 직접적으로 해석되고
+                    실행되어 더 빠른 동작속도를 보여준다.<br>또한 C언어 계열의 문법적 유사성도 기존에 구축됐던 개발자 생태계에 큰 이점으로 작용하여 그만큼 사랑받을 수 있었다. 그 특징들은
+                    아래와 같다.
 
-        .desc_info {
-            margin-top: 30px;
-        }
+                <div class="content_list">
 
-        .desc_info {
-            color: gray;
-        }
+                    <li>(1) 동적 형변환 : 다른 스크립트 언어들이 그렇듯 자바스크립트 역시 값에 따라 변수의 형변환이 자동으로
+                        이루어진다.</li>
+                    <li>(2) 프로토타입 기반 객체 지향 : 객체 생성 시에 클래스로부터 그 내용을 상속받아 객체를 만드는 것이 아니라,
+                        객체로부터 그 특성을 복제하여 새로운 객체를 생성하기 떄문에 런타임 중에도 객체의 속성과 값을 추가하거나 변경하고, 삭제까지 가능하다.</li>
+                    <li>(3) 실행 시 평가 : 프로그램 실행 시에 코드 블록을 실행할 수 있는 eval()함수와 같은 요소를 가지고 있기 때문에 프로그램 실행 도중에도 동적으로 코드를 실행할 수
+                        있다.</li>
+                    <li>(4) 고차 함수 : 고차 함수는 인자로서 함수들을 취하거나 함수를 반환할 수 있는 함수를 말한다. 자바스크립트에서는 다른 언어에서는 불가능한 방식으로 함수들을 쉽게 조작할
+                        수 있다.</li>
+                    <li>(5) 범용성 : 자바스크립트는 주로 웹브라우저에서 사용되지만, Node.js와 같은 프레임워크를 사용하면 서버 측 프로그래밍에서도 사용할 수 있다.</li>
 
-        .content_list {
-            margin-top: 60px;
-            
-        }
+                </div>
 
-        .content_list li {
+                </p>
 
-            margin-left: 40px;
-            margin-top: 20px;
-            line-height: 20px;
-            list-style-type: none;
-            color: black;
-            font-size: 15px;
-        }
-        .list_main_vertical {
-            margin-top:150px;
-            margin-bottom:120px;
-            padding-left:510px;
-            text-align:left;
-        }
-        .list_main_vertical li { 
-            font-size:15px;
-            line-height:20px;
-            color:grey;
-        }
-
-        .index {
-            margin-top: 100px;
-
-        }
-
-        a {
-            text-decoration: none;
-        }
+            </div>
+            <div class="content" id="tab1-2">
+                <h3 class="subtitle2" id="subtitle2_2">생동감 있는</h3>
+                <p class="desc_info">
+                    HTML과 CSS는 정적인(static)언어이다. 정적이라는 것은 일단 브라우저를 통해서 웹페이지를 화면에 그려주면, 이 화면을 변경할 수 없다는 의미이다.반면,
+                    Javascript는 HTML과 CSS로 만들어진 웹페이지를 유저와의 <u>상호작용에 따라 동적(interactive)으로 변경해주는 언어</u>이다. 이런 특성을 활용해 경고창을
+                    띄우고, 탭인터페이스를 만들고, Drag&Drop 기능의 웹애플리케이션을 만들 수 있다.
 
 
-        .wrap_content{
-            display :grid;
-            grid-template-columns:400px 1fr;
-        }
+                </p>
+            </div>
+            <div class="content" id="tab1-3">
+                <h3 class="subtitle2" id="subtitle2_3">재주 많은</h3>
+                <p class="desc_info">
+                    요즘 시대에는 자바스크립트가 많이 발전되어 어떤 웹사이트에서 보면 JSP나 PHP같은 언어 없이 HTML과 Javascript만으로 이루어진 웹사이트들이 등장할 정도로
+                    자바스크립트의
+                    단순함에 비해 매우
+                    다재다능한 언어가 되었다고 할 수 있다. 그 기능을 아래에 나열해 놓았다.
+                    <br><br>
 
-        .content {
-            margin-bottom: 400px;
-        }
+                <div class="content_list">
+                    <li>(1) HTML 페이지 변경 및 엘리먼트와 콘텐츠의 추가나 제거</li>
+                    <li>(2) CSS 및 HTML 엘리먼트의 스타일 변경</li>
+                    <li>(3) 사용자와의 상호작용,폼의 유효성 검증</li>
+                    <li>(4) 마우스와 키보드 이벤트에 대한 스크립트 실행</li>
+                    <li>(5) 웹 브라우저 제어,쿠키 등의 설정과 조회</li>
+                    <li>(6) AJAX 기술을 이용한 웹 서버와의 통신</li>
+                    <li>(7) 동적인 효과 이미지 롤오버 상태표시줄에 문자열 표시 등등</li>
+                    <li>(8) 웹사이트의 기능적인 면 쿠키처리, 새로운 windows열기</li>
+                </div>
+            </div>
+            </p>
+        </div>
 
-        .content_body { 
-            margin-top: 300px;
-        }
 
-        .code_result {
-            color:grey;
-            margin-top:100px;
-        }
-        .code_source { 
-            color:grey;
-            margin-top:100px;
-        }
-        @media(max-width:1000px){
-            .index {
-                display:none;
-            }
-            .wrap_content{
-                display:block;
-                text-align:center;
-            }
-        }
+    </div>
+</body>
 
-    </style>
+</html>
