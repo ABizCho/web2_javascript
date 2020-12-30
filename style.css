@@ -59,6 +59,16 @@
             color: black;
             font-size: 15px;
         }
+        .list_main_vertical {
+            margin-top:150px;
+            margin-bottom:120px;
+            padding-left:510px;
+            text-align:left;
+        }
+        .list_main_vertical li { 
+            font-size:15px;
+            line-height:20px;
+        }
 
         .index {
             margin-top: 100px;
@@ -82,12 +92,22 @@
         .content_body { 
             margin-top: 300px;
         }
+
+        .code_result {
+            color:grey;
+            margin-top:100px;
+        }
+        .code_source { 
+            color:grey;
+            margin-top:100px;
+        }
         @media(max-width:1000px){
             .index {
                 display:none;
             }
             .wrap_content{
                 display:block;
+                text-align:center;
             }
         }
 
