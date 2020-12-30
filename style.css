@@ -1,4 +1,4 @@
-<style>
+    <style>
         p {
             margin-top: 80px;
         }
@@ -82,4 +82,13 @@
         .content_body { 
             margin-top: 300px;
         }
+        @media(max-width:1000px){
+            .index {
+                display:none;
+            }
+            .wrap_content{
+                display:block;
+            }
+        }
+
     </style>
