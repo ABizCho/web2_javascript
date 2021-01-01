@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JS - 리팩토링</title>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>리팩토링</h1>
+    <p>
+        '리팩토링'이란 간단히 코딩을 하고나서 동작은 그대로 두고 정갈하게 정리되지 못한 코드의 중복을 제거하고 효율을 높히는 방향으로의 코드 개선 작업을 말한다.
+    </p>
+    <br>
+    <p>
+        코드가 길어지고 프로그램이 커짐에 따라 리팩토링을 틈틈히 실시 해줘야 한다.
+    </p>
+    <br>
+    <p>
+        해당 페이지에선 직전의 실습코드였던 ToggleButton 구현 코드를 가져와 이를 대상으로 리팩토링을 실시해보고자 한다.<br><br><br>
+
+        구체적으로는 중복 개선이라는 작업을 목표로 하기 위해 처음 토글버튼 코드를 똑같이 복사해 두개의 버튼을 만들고 이를 개선하는 작업을 실시한다.
+    </p>
+
+
+
+
+    <h2 style="margin-top:100px;">ToggleButton1</h2>
+
+    <input id="night_day" type='button' value='day' onclick="
+    if(document.querySelector('#night_day').value==='day')
+    {
+        document.querySelector('#night_day').value='night';
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+    }
+    else
+    {
+        document.querySelector('#night_day').value='day';
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+    }
+    ">
+
+    <h2 style="margin-top:100px;">ToggleButton2</h2>
+
+    <input id="night_day" type='button' value='day' onclick="
+    if(document.querySelector('#night_day').value==='day')
+    {
+        document.querySelector('#night_day').value='night';
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+    }
+    else
+    {
+        document.querySelector('#night_day').value='day';
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+    }
+    ">
+
+    <div style='margin-top:100px;'>
+        <h1>this</h1>
+
+        javascript에는 리팩토링을 위한 아주 효율적인 도구인 this라는 문법을 가지고있다.<br><br>
+        이는 무엇인가? 바로 위의 토글버튼 소스에서 onlclick의 인자로 넣어줬던 <br><br><br>
+
+
+        <strong>document.querySelector('#버튼id명').XXXX.XXXX = 'XXX';</strong>
+
+        <br><br><br>
+        와 같이 자바스크립트의 쿼리선택자로 선택해줬던 'body'태그를 대신하여 선택자 없이 해당 input태그에서 선언한 바로 자기 자신의 태그를 선택해주는 문법이다 따라서 this를 활용하여 자기자신을
+        선택하도록 수정한 모습은 이러하다.<br><br><br>
+
+        <strong>this.XXXX.XXXX = 'XXX';</strong>
+
+        <br><br><br><br>
+
+        위와같이 활용해준다면 각 버튼에 id를 부여할 필요도 없기 때문에<br>위의 버튼예제에서 각 버튼의 id값과 그에 따라 선택자의 이름도 바꿔주던 불필요한 작업을 최소화시키고 단순히 코드를 붙여넣기만
+        하면 개별 버튼을 만들어 낼 수 있어 유지보수에 매우 효율적으로 변한다. 이것이 this와 리팩토링의 힘이다.
+
+        <br><br><br><br>
+        이고잉 선생은 말한다.<br><br>
+        <strong style="font-size:20px;">"코딩을 잘하기 위한 방법을 단 한가지만알려주자면, 중복을 마지막 하나까지 그 끝까지 쫓아가서 없애버려라"<br></strong>
+
+
+        <xmp>
+
+            <input type='button' value='day' onclick="
+            if(this.value==='day')
+            {
+                this.value='night';
+                this.style.backgroundColor='black';
+                this.style.color='white';
+            }
+            else
+            {
+                this.value='day';
+                this.style.backgroundColor='white';
+                this.style.color='black';
+            }
+            ">
+            
+        </xmp>
+
+
+        <p style="margin-top:60px; ">
+            마지막으로 변수선언과 활용으로 이런 중복을 없앤 코드의 개선전/후 모습을 보여주며 해당 페이지를 마친다.
+        </p>
+        
+        <p style="margin-top:60px; ">
+            <h3  style="text-align:center;">전</h3>
+            <xmp>
+                <input id="night_day" type='button' value='day' onclick="
+                if(document.querySelector('#night_day').value==='day')
+                {
+                    document.querySelector('#night_day').value='night';
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.color='white';
+                }
+                else
+                {
+                    document.querySelector('#night_day').value='day';
+                    document.querySelector('body').style.backgroundColor='white';
+                    document.querySelector('body').style.color='black';
+                }
+                ">
+            </xmp>
+        
+        </p>
+
+        <p style="margin-top:60px; ">
+            <h3  style="text-align:center;">후</h3>
+            <xmp>
+                <input id="night_day" type='button' value='day' onclick="
+                var target = document.querySelector('body');
+                if(this.value==='day')
+                {
+                    this.value='night';
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                }
+                else
+                {
+                    this.value='day';
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                }
+                ">
+            </xmp>
+        
+        </p>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
